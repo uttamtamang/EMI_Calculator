@@ -1,18 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_margin="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="50dp"
+        android:text="EMI Calculator"
+        android:fontFamily="serif"
+        android:textColor="@color/navy"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Your EMI will display here*"
+        android:id="@+id/result"
+        android:textColor="@color/result"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="serif"
+        ></TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter principle Amount here*"
+        android:textColor="@color/navy"
+        android:textSize="15dp"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/principle"
+        android:hint="RS: 000000"
+        android:textSize="15dp"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Interest Rate here*"
+        android:textColor="@color/navy"
+        android:textSize="15dp"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rate"
+        android:hint="Interest Rate %"
+        android:textSize="15dp"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Number of month here*"
+        android:textColor="@color/navy"
+        android:textSize="15dp"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/month"
+        android:hint="Month : 00"
+        android:textSize="15dp"
+        android:inputType="number"
+        android:singleLine="true"
+        android:layout_marginBottom="20dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navy"
+        android:textColor="@color/text"
+        android:text="Calculate EMI"
+        android:id="@+id/btn1"
+        android:onClick="calculateEMI"
+        android:padding="10dp"></Button>
+
+
+</LinearLayout>
